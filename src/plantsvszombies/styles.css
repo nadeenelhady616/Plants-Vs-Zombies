@@ -1,0 +1,5 @@
+.progress-bar {
+    -fx-accent: #ff0000; /* Change progress bar color */
+    -fx-background-color: black; /* Change background color */
+     -fx-control-inner-background: #555555;
+}

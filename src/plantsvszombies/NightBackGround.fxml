@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1381.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="plantsvszombies.scenecontroller1">
+    <children>
+        <ImageView fx:id="GameBackground" fitHeight="855.0" fitWidth="1386.0" layoutX="-1.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@NightBackgroundImage.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="sumImage" fitHeight="41.0" fitWidth="244.0" layoutX="203.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@sunCounter.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgview1" fitHeight="130.0" fitWidth="100.0" layoutX="353.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imgview2" fitHeight="130.0" fitWidth="100.0" layoutX="345.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imgview3" fitHeight="130.0" fitWidth="100.0" layoutX="352.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imgview4" fitHeight="130.0" fitWidth="100.0" layoutX="347.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true" />
+        <Pane fx:id="gamelanes" layoutX="200.0" layoutY="67.0" prefHeight="679.0" prefWidth="1141.0">
+         <children>
+             <GridPane fx:id="gridPane" layoutX="131.0" layoutY="27.0" prefHeight="679.0" prefWidth="1003.0">
+              <columnConstraints>
+                <ColumnConstraints maxWidth="130.0" minWidth="0.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="98.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="0.0" prefWidth="119.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="0.0" prefWidth="104.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="121.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="112.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="102.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="82.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </children>
+      </Pane>
+        <ImageView fx:id="imgview5" fitHeight="130.0" fitWidth="100.0" layoutX="345.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="sunCounterLabel" layoutX="251.0" layoutY="30.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #ffecaa;" textAlignment="CENTER">
+            <font>
+                <Font name="Algerian" size="23.0" />
+            </font>
+        </Label>
+      <ProgressBar fx:id="progressBar" layoutX="825.0" layoutY="18.0" prefHeight="32.0" prefWidth="330.0" progress="0.11" rotate="180.0" stylesheets="@styles.css" />
+        <VBox fx:id="plantsImagesVbox" layoutX="59.0" layoutY="27.0" prefHeight="388.0" prefWidth="115.0" spacing="20.0">
+            <children>
+                <ImageView fx:id="sunflowerPlant" fitHeight="82.0" fitWidth="500.0" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@SeedPictures/sun.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="peashooterPlant" fitHeight="82.0" fitWidth="140.0" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@SeedPictures/peaShooter.png" />
+                    </image>
+                </ImageView>
+            <ImageView fx:id="NightSunPlant" fitHeight="82.0" fitWidth="140.0" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@SeedPictures/nightSun.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="doublePeaShooter" fitHeight="82.0" fitWidth="140.0" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@SeedPictures/doublePeaShooter.png" />
+               </image>
+            </ImageView>
+                <ImageView fx:id="potato" fitHeight="82.0" fitWidth="151.0" onDragDetected="#handleMouseDragged" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@SeedPictures/potato.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="cherryBomb" fitHeight="82.0" fitWidth="140.0" onDragDetected="#handleMouseDragged" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@SeedPictures/cherryBomb.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1172.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@menuBoard.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="exitbtn" layoutX="1177.0" layoutY="-8.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: transparent;" textFill="#21b90c">
+         <font>
+            <Font name="Algerian" size="38.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
